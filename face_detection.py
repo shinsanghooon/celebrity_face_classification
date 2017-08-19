@@ -4,7 +4,7 @@ import cv2
 face_cascade = cv2.CascadeClassifier('/Users/sinsanghun/anaconda/pkgs/opencv-2.4.11-py27_1/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml')
 eye_casecade = cv2.CascadeClassifier('/Users/sinsanghun/anaconda/pkgs/opencv-2.4.11-py27_1/share/OpenCV/haarcascades/haarcascade_eye.xml')
 
-lst = ["김혜수", "엄지원", "라미란", "심은하", "김민희"]
+# lst = list including celebrities
 
 for name in lst:
     for i in range(500):

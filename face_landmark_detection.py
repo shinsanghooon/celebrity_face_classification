@@ -1,4 +1,3 @@
-
 import sys
 import os
 import dlib
@@ -54,5 +53,8 @@ for f in glob.glob(os.path.join(faces_folder_path, "*.jpg")):
         win.add_overlay(dets)
         dlib.hit_enter_to_continue()
     except:
+        # when the file is not type of Image
         print("NOT PICTURE !")
 
+
+        

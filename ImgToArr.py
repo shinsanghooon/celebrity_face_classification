@@ -69,3 +69,13 @@ def ImgToArr2(name, pwd):
             y.append(name)
     
     return X, y
+
+
+# 이렇게해서 저장하고 
+d = dfX.reshape(3432, -1)
+dd = pd.DataFrame(d)
+dd["label"] = dfy
+dd.to_csv("temp_face.csv")
+
+# 다시 불러온 뒤 
+ar = np.array(dd.iloc[:,:-1]).reshape(3432, 96, 96)

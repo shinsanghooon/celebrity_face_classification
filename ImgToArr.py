@@ -38,3 +38,34 @@ for j in os.listdir(pwd):
         for i in range(len(X)):
             dfX.append(X[i])
             dfy.append(y[i])
+           
+        
+        
+def ImgToArr2(name, pwd):
+    
+    from PIL import Image
+    import numpy as np
+    import os
+    
+    path = pwd + "/" + name
+    os.chdir(path)
+    
+    X = []
+    y = []
+    
+    # 디렉토리에 있는 사진 
+    for img in os.listdir(path):
+        if img != ".DS_Store":
+            print(img)
+            im = Image.open(img)
+            col,row =  im.size
+            data = np.zeros((row, col))
+            pixels = im.load()
+            for i in range(row):
+                for j in range(col):
+                    data[j, i] =  255-pixels[i,j]
+            # 1 person's data and label
+            X.append(data)
+            y.append(name)
+    
+    return X, y

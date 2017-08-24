@@ -24,11 +24,12 @@ def aug_image(name, pwd):
                 i += 1
                 if i > 1:
                     break  
-                
-            
+                  
 import os
 pwd = "/Users/sinsanghun/Desktop/project3/generator"
 
 for j in os.listdir(pwd):
     if j != ".DS_Store":
         aug_image(j, pwd)
+
+        

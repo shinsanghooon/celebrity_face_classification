@@ -6,12 +6,12 @@ def aug_image(name, pwd):
     path = pwd + "/" + name
     
     datagen = ImageDataGenerator(
-            rotation_range=10,
-            width_shift_range=0.1,
+            rotation_range=10, # change picture's angle 
+            width_shift_range=0.1, 
             height_shift_range=0.05,
-            shear_range=0,
+            shear_range=0, 
             zoom_range=0.1,
-            horizontal_flip=False,
+            horizontal_flip=False, 
             fill_mode='nearest')
     
     for i in os.listdir(path):
@@ -22,6 +22,7 @@ def aug_image(name, pwd):
             i = 0
             for batch in datagen.flow(x, batch_size=1, save_to_dir=path, save_prefix='temp', save_format='jpg'):
                 i += 1
+                # loop for how many pictures you want to generate 
                 if i > 1:
                     break  
                   

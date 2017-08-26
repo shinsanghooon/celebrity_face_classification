@@ -7,3 +7,4 @@ CNN을 통해 연예인 얼굴 사진을 이용한 classification 모델을 만�
 - openCV ( affine transformation ) 
 - DNN (이미지를 128차원 데이터로 변환)
 - classification algorithm 사용 
+- 지인 얼굴 입력 -> 가장 닮은 연예인 확률 출력 
